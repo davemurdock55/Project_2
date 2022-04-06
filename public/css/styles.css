@@ -68,19 +68,24 @@
   --bs-body-bg: #fff;
 }
 
-.tbl-form {
-  background-color: #fff;
-  color: #000;
+.tbl-ovrflw {
+  overflow-x: scroll;
 }
 
 .tbl-btn {
-  background-color: rgb(255, 113, 113);
+  background-color: transparent;
   color: inherit;
-  border: 0px;
-  border-radius: 15px;
-  /* margin: 3px 3px 3px 3px; */
+  border: 1px solid #fff;
+  border-radius: 4px;
+  margin: 3px 3px 3px 3px;
   align-content: center;
+  transition: .3s;
+}
 
+.tbl-btn:hover {
+  background-color: #fff;
+  color: black;
+  transition: .4s;
 }
 
 /* Custom Styles */
