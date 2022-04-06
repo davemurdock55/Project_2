@@ -237,8 +237,8 @@
                             <th>State</th>
                             <th>Gender</th>
                             <th>Race</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
+                            <!-- <th>Edit</th>
+                            <th>Delete</th> -->
                         </tr>
                     </thead>
                     <tbody>
@@ -257,18 +257,25 @@
                                 <td><%= aCases[iCount].gender %></td>
                                 <td><%= aCases[iCount].race %></td>
                                 <!-- <td> <a class="btn-primary" href="/edit/<%= aCases[iCount].case %>">Edit</a> </td> -->
-                                <td class="tbl-form">
+                                <!-- <td class="tbl-form">
                                     <form method="get" action="/edit/<%= aCases[iCount].case %>">
                                         <button type="submit" class="tbl-btn">Edit</button>
                                     </form>
                                 </td>
                                 <td class="tbl-form">
                                     <form method="get" action="/delete/<%= aCases[iCount].case %>" class="tbl-form">
-                                        <button type="submit" class="tbl-btn">Delete</button>
+                                        <button type="submit" class="tbl-btn-del">Delete</button>
                                     </form>
-                                </td>
+                                </td> -->
                             </tr>
                         <% } %>
+                        <tr>
+                            <center>
+                                <form method="get" action="/addcase">
+                                    <button class="btn btn-light btn-xl" type="submit">Report a Case</button>
+                                </form>
+                            </center>
+                        </tr>
                     </tbody>
                 </table>
                 <br>

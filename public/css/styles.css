@@ -82,9 +82,26 @@
   transition: .3s;
 }
 
+
 .tbl-btn:hover {
   background-color: #fff;
-  color: black;
+  color: #000;
+  transition: .4s;
+}
+
+.tbl-btn-del {
+  background-color: transparent;
+  color: inherit;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  margin: 3px 3px 3px 3px;
+  align-content: center;
+  transition: .3s;
+}
+
+.tbl-btn-del:hover {
+  background-color: var(--bs-primary);
+  color: #fff;
   transition: .4s;
 }
 
