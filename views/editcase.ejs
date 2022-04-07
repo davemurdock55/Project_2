@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Case</title>
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
     <style>
         table, th, td
         {
@@ -27,30 +27,30 @@
         <fieldset>
             <legend>Edit/Update a Case</legend>
             <label for="date_missing">Date this person went missing: </label>
-            <input type="date" id="date_missing" name="date_missing" value="<%= aCase[0].date_missing.getFullYear() %>-<%= aCase[0].date_missing.getMonth() %>-<%= aCase[0].date_missing.getDate() %>"><br>
+            <input type="date" id="date_missing" name="date_missing" required value="<%= aCase[0].date_missing.getFullYear() %>-<%= aCase[0].date_missing.getMonth() %>-<%= aCase[0].date_missing.getDate() %>"><br>
 
             <script>
               console.log(aCase[0].date_missing);
             </script>
 
             <label for="first_name">Person's first name:  </label>
-            <input type="text" id="first_name" name="first_name" max="30" value="<%= aCase[0].first_name %>"><br><br>
+            <input type="text" id="first_name" name="first_name" maxlength="30" required value="<%= aCase[0].first_name %>"><br><br>
 
             <label for="last_name">Person's last name:  </label>
-            <input type="text" id="last_name" name="last_name" max="30" value="<%= aCase[0].last_name %>"><br><br>
+            <input type="text" id="last_name" name="last_name" maxlength="30" required value="<%= aCase[0].last_name %>"><br><br>
             
             <label for="age_at_missing">Person's age when they went missing:  </label>
-            <input type="number" id="age_at_missing" name="age_at_missing" maxlength="3" value="<%= aCase[0].age_at_missing %>"><br><br>
+            <input type="number" id="age_at_missing" name="age_at_missing" maxlength="3" required value="<%= aCase[0].age_at_missing %>"><br><br>
 
             <label for="city">City where the person went missing:  </label>
-            <input type="text" id="city" name="city" maxlength="30" value="<%= aCase[0].city %>"><br><br>
+            <input type="text" id="city" name="city" maxlength="30" required value="<%= aCase[0].city %>"><br><br>
 
             <label for="state">State where the person went missing:  </label>
-            <input type="text" id="state" name="state" maxlength="2" value="<%= aCase[0].state %>"><br><br>
+            <input type="text" id="state" name="state" maxlength="2" required value="<%= aCase[0].state %>"><br><br>
 
             <label for="gender">Person's gender:  </label>
             <!-- <input type="text" id="gender" name="gender" max="1" value="<%= aCase[0].gender %>"><br><br> -->
-            <select name="gender" id="gender" value="<%= aCase[0].gender %>">
+            <select name="gender" id="gender" required value="<%= aCase[0].gender %>">
                 <option value="M" <% if(aCase[0].gender == "M") {%>
                     selected
                 <%}%>>Male</option>
@@ -64,7 +64,7 @@
 
             <label for="race">Person's race:  </label>
             <!-- <input type="text" id="race" name="race" max="1" value="<%= aCase[0].race %>"><br><br> -->
-            <select name="race" id="race" value="<%= aCase[0].race %>">
+            <select name="race" id="race" required value="<%= aCase[0].race %>">
                 <option value="W" <% if(aCase[0].race == "W") {%>
                     selected
                 <%}%>>W</option>

@@ -68,6 +68,10 @@
   --bs-body-bg: #fff;
 }
 
+.round {
+  border-radius: 30px;
+}
+
 .tbl-ovrflw {
   overflow-x: scroll;
 }

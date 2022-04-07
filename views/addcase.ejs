@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Report A Case</title>
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
     <style>
         table, th, td 
         {
@@ -34,26 +34,26 @@
                 <fieldset>
                     <legend>Report a Case</legend>
                     <label for="date_missing">Date this person went missing: </label>
-                    <input type="date" id="date_missing" name="date_missing"><br>
+                    <input type="date" id="date_missing" name="date_missing" required><br>
 
                     <label for="first_name">Person's first name:  </label>
-                    <input type="text" id="first_name" name="first_name" max="30"><br><br>
+                    <input type="text" id="first_name" name="first_name" maxlength="30" required><br><br>
 
                     <label for="last_name">Person's last name:  </label>
-                    <input type="text" id="last_name" name="last_name" max="30"><br><br>
+                    <input type="text" id="last_name" name="last_name" maxlength="30" required><br><br>
                     
                     <label for="age_at_missing">Person's age when they went missing:  </label>
-                    <input type="number" id="age_at_missing" name="age_at_missing" maxlength="3"><br><br>
+                    <input type="number" id="age_at_missing" name="age_at_missing" maxlength="3" required><br><br>
 
                     <label for="city">City where the person went missing:  </label>
-                    <input type="text" id="city" name="city" maxlength="30"><br><br>
+                    <input type="text" id="city" name="city" maxlength="30" required><br><br>
 
                     <label for="state">State where the person went missing:  </label>
-                    <input type="text" id="state" name="state" maxlength="2"><br><br>
+                    <input type="text" id="state" name="state" maxlength="2" required><br><br>
 
                     <label for="gender">Person's gender:  </label>
                     <!-- <input type="text" id="gender" name="gender" max="1"><br><br> -->
-                    <select name="gender" id="gender">
+                    <select name="gender" id="gender" required>
                         <option value="M">Male</option>
                         <option value="F">Female</option>
                         <option value="O">Other</option>
@@ -61,7 +61,7 @@
 
                     <label for="race">Person's race:  </label>
                     <!-- <input type="text" id="race" name="race" max="1"><br><br> -->
-                    <select name="race" id="race">
+                    <select name="race" id="race" required>
                         <option value="W">W</option>
                         <option value="M">M</option>
                         <option value="H">H</option>
