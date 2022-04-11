@@ -1,78 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Report A Case</title>
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="/css/styles.css" rel="stylesheet" />
-    <style>
-        table, th, td 
-        {
-            border-collapse: collapse;
-            border: 1px solid;
-            padding-right: 20px;
-            text-align: center;
-        }
-
-    </style>
-    <!-- CSS Bulma -->
-    <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/bulma/0.7.2/css/bulma.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report A Case</title>
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="/css/styles.css" rel="stylesheet" />
+  <style>
+    table,
+    th,
+    td {
+      border-collapse: collapse;
+      border: 1px solid;
+      padding-right: 20px;
+      text-align: center;
+    }
+  </style>
+  <!-- CSS Bulma -->
+  <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/bulma/0.7.2/css/bulma.css" />
 </head>
+
 <body>
-    <section class="page-section bg-dark text-white" id="addcase">
-        <div class="container px-4 px-lg-5 text-center">
-            <h2 class="mb-4">Human Trafficking Statistics</h2>
-            <hr class="divider divider-light" />
-            <p>Over 50% of identified girl victims are aged between 15 and 17 while about 40% of trafficked boys are under 12 years of age.</p>
-            
-            <center>
-            <h1>Report a Case of Human Trafficking</h1><br>
+  <section class="page-section bg-dark text-white" id="addcase">
+    <div class="container px-4 px-lg-5 text-center">
+      <h2 class="mb-4">Human Trafficking Statistics</h2>
+      <hr class="divider divider-light" />
+      <p>Over 50% of identified girl victims are aged between 15 and 17 while about 40% of trafficked boys are under 12 years of age.</p>
 
-            <form method="post" action="/addcase">
-                <fieldset>
-                    <legend>Report a Case</legend>
-                    <label for="date_missing">Date this person went missing: </label>
-                    <input type="date" id="date_missing" name="date_missing" required><br>
+      <center>
+        <h1>Report a Case of Human Trafficking</h1><br>
 
-                    <label for="first_name">Person's first name:  </label>
-                    <input type="text" id="first_name" name="first_name" maxlength="30" required><br><br>
+        <form method="post" action="/addcase">
+          <fieldset>
+            <legend>Report a Case</legend>
+            <!-- <div style="text-align: left; margin-left: 25%;"> -->
+            <label style="margin-left: 25%;" for="date_missing">Date this person went missing: </label>
+            <input style="margin-right: 25%;" type="date" id="date_missing" name="date_missing" required><br><br>
 
-                    <label for="last_name">Person's last name:  </label>
-                    <input type="text" id="last_name" name="last_name" maxlength="30" required><br><br>
-                    
-                    <label for="age_at_missing">Person's age when they went missing:  </label>
-                    <input type="number" id="age_at_missing" name="age_at_missing" maxlength="3" required><br><br>
+            <label for="first_name">Person's first name: </label>
+            <input type="text" id="first_name" name="first_name" maxlength="30" required><br><br>
 
-                    <label for="city">City where the person went missing:  </label>
-                    <input type="text" id="city" name="city" maxlength="30" required><br><br>
+            <label for="last_name">Person's last name: </label>
+            <input type="text" id="last_name" name="last_name" maxlength="30" required><br><br>
 
-                    <label for="state">State where the person went missing:  </label>
-                    <input type="text" id="state" name="state" maxlength="2" required><br><br>
+            <label for="age_at_missing">Person's age when they went missing: </label>
+            <input type="number" id="age_at_missing" name="age_at_missing" maxlength="3" required><br><br>
 
-                    <label for="gender">Person's gender:  </label>
-                    <!-- <input type="text" id="gender" name="gender" max="1"><br><br> -->
-                    <select name="gender" id="gender" required>
-                        <option value="M">Male</option>
-                        <option value="F">Female</option>
-                        <option value="O">Other</option>
-                    </select>
+            <label for="city">City where the person went missing: </label>
+            <input type="text" id="city" name="city" maxlength="30" required><br><br>
 
-                    <label for="race">Person's race:  </label>
-                    <!-- <input type="text" id="race" name="race" max="1"><br><br> -->
-                    <select name="race" id="race" required>
-                        <option value="W">W</option>
-                        <option value="M">M</option>
-                        <option value="H">H</option>
-                    </select>
+            <label for="state">State where the person went missing: </label>
+            <input type="text" id="state" name="state" maxlength="2" required><br><br>
 
-                    <label for="submitButton"></label>
-                    <button type="submit" id="submitButton">Add Case</button>
-                </fieldset>
-            </form>
-            </center>
-        </div>
-    </section>
+            <label for="gender">Person's gender: </label>
+            <!-- <input type="text" id="gender" name="gender" max="1"><br><br> -->
+            <select name="gender" id="gender" required>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+              <option value="O">Other</option>
+            </select>
+            <br><br>
+            <div>
+              <label for="race">Person's race: </label>
+              <!-- <input type="text" id="race" name="race" max="1"><br><br> -->
+              <select name="race" id="race" required>
+                <option value="W">W</option>
+                <option value="M">M</option>
+                <option value="H">H</option>
+              </select>
+            </div>
+            <!-- </div> -->
+            <div><label for="submitButton"></label></div>
+            <button type="submit" id="submitButton">Add Case</button>
+          </fieldset>
+        </form>
+      </center>
+    </div>
+  </section>
 </body>
+
 </html>
