@@ -21,98 +21,103 @@
     <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/bulma/0.7.2/css/bulma.css" />
 </head>
 <body>
-    <center>
-    <h1>Edit a Case</h1><br>
-    <form method="post" action="/edit/<%= aCase[0].case %>">
-        <fieldset>
-            <legend>Edit/Update a Case</legend>
-            <label for="date_missing">Date this person went missing: </label>
-            <!-- <input type="date" id="date_missing" name="date_missing" required value="<%= aCase[0].date_missing.getFullYear() %>-<%= aCase[0].date_missing.getMonth() %>-<%= aCase[0].date_missing.getDate() %>"><br> -->
-            <input type="text" id="date_missing" name="date_missing" value="<%= aCase[0].date_missing %> ">
+    <section class="page-section bg-dark text-white" id="statistics">
+        <div class="container px-4 px-lg-5 text-center">
+            <center>
+            <h1>Edit a Case</h1><br>
+            <form method="post" action="/edit/<%= aCase[0].case %>">
+                <fieldset>
+                    <legend>Edit/Update a Case</legend>
+                    <label for="date_missing">Date this person went missing: </label>
+                    <!-- <input type="date" id="date_missing" name="date_missing" required value="<%= aCase[0].date_missing.getFullYear() %>-<%= aCase[0].date_missing.getMonth() %>-<%= aCase[0].date_missing.getDate() %>"><br> -->
+                    <input type="text" id="date_missing" name="date_missing" value="<%= aCase[0].date_missing %> ">
 
-            <script>
-              console.log(aCase[0].date_missing);
-            </script>
+                    <script>
+                    console.log(aCase[0].date_missing);
+                    </script>
 
-            <label for="first_name">Person's first name:  </label>
-            <input type="text" id="first_name" name="first_name" maxlength="30" required value="<%= aCase[0].first_name %>"><br><br>
+                    <label for="first_name">Person's first name:  </label>
+                    <input type="text" id="first_name" name="first_name" maxlength="30" required value="<%= aCase[0].first_name %>"><br><br>
 
-            <label for="last_name">Person's last name:  </label>
-            <input type="text" id="last_name" name="last_name" maxlength="30" required value="<%= aCase[0].last_name %>"><br><br>
-            
-            <label for="age_at_missing">Person's age when they went missing:  </label>
-            <input type="number" id="age_at_missing" name="age_at_missing" maxlength="3" required value="<%= aCase[0].age_at_missing %>"><br><br>
+                    <label for="last_name">Person's last name:  </label>
+                    <input type="text" id="last_name" name="last_name" maxlength="30" required value="<%= aCase[0].last_name %>"><br><br>
+                    
+                    <label for="age_at_missing">Person's age when they went missing:  </label>
+                    <input type="number" id="age_at_missing" name="age_at_missing" maxlength="3" required value="<%= aCase[0].age_at_missing %>"><br><br>
 
-            <label for="city">City where the person went missing:  </label>
-            <input type="text" id="city" name="city" maxlength="30" required value="<%= aCase[0].city %>"><br><br>
+                    <label for="city">City where the person went missing:  </label>
+                    <input type="text" id="city" name="city" maxlength="30" required value="<%= aCase[0].city %>"><br><br>
 
-            <label for="state">State where the person went missing:  </label>
-            <input type="text" id="state" name="state" maxlength="2" required value="<%= aCase[0].state %>"><br><br>
+                    <label for="state">State where the person went missing:  </label>
+                    <input type="text" id="state" name="state" maxlength="2" required value="<%= aCase[0].state %>"><br><br>
 
-            <label for="gender">Person's gender:  </label>
-            <!-- <input type="text" id="gender" name="gender" max="1" value="<%= aCase[0].gender %>"><br><br> -->
-            <select name="gender" id="gender" required value="<%= aCase[0].gender %>">
-                <option value="M" <% if(aCase[0].gender == "M") {%>
-                    selected
-                <%}%>>Male</option>
-                <option value="F" <% if(aCase[0].gender == "F") {%>
-                    selected
-                <%}%>>Female</option>
-                <option value="O" <% if(aCase[0].gender == "O") {%>
-                    selected
-                <%}%>>Other</option>
-            </select>
+                    <label for="gender">Person's gender:  </label>
+                    <!-- <input type="text" id="gender" name="gender" max="1" value="<%= aCase[0].gender %>"><br><br> -->
+                    <select name="gender" id="gender" required value="<%= aCase[0].gender %>">
+                        <option value="M" <% if(aCase[0].gender == "M") {%>
+                            selected
+                        <%}%>>Male</option>
+                        <option value="F" <% if(aCase[0].gender == "F") {%>
+                            selected
+                        <%}%>>Female</option>
+                        <option value="O" <% if(aCase[0].gender == "O") {%>
+                            selected
+                        <%}%>>Other</option>
+                    </select>
 
-            <label for="race">Person's race:  </label>
-            <!-- <input type="text" id="race" name="race" max="1" value="<%= aCase[0].race %>"><br><br> -->
-            <select name="race" id="race" required value="<%= aCase[0].race %>">
-                <option value="W" <% if(aCase[0].race == "W") {%>
-                    selected
-                <%}%>>W</option>
-                <option value="M" <% if(aCase[0].race == "M") {%>
-                    selected
-                <%}%>>M</option>
-                <option value="H" <% if(aCase[0].race == "H") {%>
-                    selected
-                <%}%>>H</option>
-            </select>
+                    <label for="race">Person's race:  </label>
+                    <!-- <input type="text" id="race" name="race" max="1" value="<%= aCase[0].race %>"><br><br> -->
+                    <select name="race" id="race" required value="<%= aCase[0].race %>">
+                        <option value="W" <% if(aCase[0].race == "W") {%>
+                            selected
+                        <%}%>>W</option>
+                        <option value="M" <% if(aCase[0].race == "M") {%>
+                            selected
+                        <%}%>>M</option>
+                        <option value="H" <% if(aCase[0].race == "H") {%>
+                            selected
+                        <%}%>>H</option>
+                    </select>
 
-            <!-- <table>
-                <thead>
-                    <tr>Edit Case (Raw Data)</tr>
-                    <tr>
-                        <th>Date Missing</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Age At Missing</th>
-                        <th>City</th>
-                        <th>State</th>
-                        <th>Gender</th>
-                        <th>Race</th>
-                    </tr>
-                </thead>
-                <tbody>
-                        <tr>
-                            
-                            <td>
-                                <div contenteditable>
-                                <%= aCase[0].date_missing.getMonth() +1 %>/<%= aCase[0].date_missing.getDate() %>/<%= aCase[0].date_missing.getFullYear() %>
-                                </div>
-                            </td>
-                            <td><div contenteditable><%= aCase[0].first_name %></div></td>
-                            <td><div contenteditable><%= aCase[0].last_name %></td>
-                            <td><div contenteditable><%= aCase[0].age_at_missing %></div></td>
-                            <td><div contenteditable><%= aCase[0].city %></div></td>
-                            <td><div contenteditable><%= aCase[0].state %></div></td>
-                            <td><div contenteditable><%= aCase[0].gender %></div></td>
-                            <td><div contenteditable><%= aCase[0].race %></div></td>
-                        </tr>
-                </tbody>
-            </table> -->
-            <label for="submitButton"></label>
-            <button type="submit" id="submitButton">Save Edits</button>
-        </fieldset>
-    </form>
-    </center>
+                    <!-- <table>
+                        <thead>
+                            <tr>Edit Case (Raw Data)</tr>
+                            <tr>
+                                <th>Date Missing</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age At Missing</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>Gender</th>
+                                <th>Race</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    
+                                    <td>
+                                        <div contenteditable>
+                                        <%= aCase[0].date_missing.getMonth() +1 %>/<%= aCase[0].date_missing.getDate() %>/<%= aCase[0].date_missing.getFullYear() %>
+                                        </div>
+                                    </td>
+                                    <td><div contenteditable><%= aCase[0].first_name %></div></td>
+                                    <td><div contenteditable><%= aCase[0].last_name %></td>
+                                    <td><div contenteditable><%= aCase[0].age_at_missing %></div></td>
+                                    <td><div contenteditable><%= aCase[0].city %></div></td>
+                                    <td><div contenteditable><%= aCase[0].state %></div></td>
+                                    <td><div contenteditable><%= aCase[0].gender %></div></td>
+                                    <td><div contenteditable><%= aCase[0].race %></div></td>
+                                </tr>
+                        </tbody>
+                    </table> -->
+                    <label for="submitButton"></label>
+                    <button type="submit" id="submitButton">Save Edits</button>
+                </fieldset>
+            </form>
+            </center>
+        </div>
+    </section>
+
 </body>
 </html>
