@@ -68,6 +68,11 @@
   --bs-body-bg: #fff;
 }
 
+.btn-trans {
+  background-color: transparent;
+  border: none;
+}
+
 .btn-sml {
   background-color: #fff;
   color: #000;
