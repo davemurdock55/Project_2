@@ -27,7 +27,8 @@
         <fieldset>
             <legend>Edit/Update a Case</legend>
             <label for="date_missing">Date this person went missing: </label>
-            <input type="date" id="date_missing" name="date_missing" required value="<%= aCase[0].date_missing.getFullYear() %>-<%= aCase[0].date_missing.getMonth() %>-<%= aCase[0].date_missing.getDate() %>"><br>
+            <!-- <input type="date" id="date_missing" name="date_missing" required value="<%= aCase[0].date_missing.getFullYear() %>-<%= aCase[0].date_missing.getMonth() %>-<%= aCase[0].date_missing.getDate() %>"><br> -->
+            <input type="text" id="date_missing" name="date_missing" value="<%= aCase[0].date_missing %> ">
 
             <script>
               console.log(aCase[0].date_missing);
