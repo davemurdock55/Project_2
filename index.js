@@ -5,7 +5,7 @@
 const PORT = process.env.PORT || "3000";
 let hostname = process.env.RDS_HOSTNAME || "127.0.0.1";
 let rds_port = process.env.RDS_PORT || "5432";
-let rds_db_name = "paradise_donut";
+let rds_db_name = "human_trafficking";
 let rds_username = process.env.RDS_USERNAME || "postgres";
 let rds_password = process.env.RDS_password || "1El2Is5us10!";
 
@@ -38,11 +38,11 @@ const knex = require("knex") (
 {
     client: "pg",
     connection: {
-        host: "localhost",
-        user: "postgres",
-        password: "1El2Is5us10!",
-        database: "human_trafficking",
-        post: 5432,
+        host: hostname,
+        user: rds_username,
+        password: rds_password,
+        database: rds_db_name,
+        post: rds_port,
     },
 });
 
