@@ -68,6 +68,12 @@
   --bs-body-bg: #fff;
 }
 
+.sml {
+  height: 10px;
+  width: fit-content;
+  padding-bottom: 50px;
+}
+
 .round {
   border-radius: 30px;
 }
