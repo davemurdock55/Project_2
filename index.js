@@ -51,7 +51,10 @@ app.get("/", (req, res) => {
         (result) => {
             res.render("index",{aCases: result}); // the "result" array is now the data's array in the ejs file
         } // putting the results of the table into an array 
-    );
+    ).catch(err => {
+        console.log(err);
+        res.status(500).json({err});
+    });
 });
 
 // rerouting "/home" to "/" (index.js (home page))
@@ -68,7 +71,10 @@ app.get('/viewdata', (req, res) => {
         (result) => {
             res.render("viewdata",{aCases: result}); // the "result" array is now the data's array in the ejs file
         } // putting the results of the table into an array 
-    );
+    ).catch(err => {
+        console.log(err);
+        res.status(500).json({err});
+    });
 });
 
 // Creating a path to the index.ejs file
@@ -79,7 +85,10 @@ app.get('/index', (req, res) => {
         (result) => {
             res.render("viewdata",{aCases: result}); // the "result" array is now the data's array in the ejs file
         } // putting the results of the table into an array 
-    );
+    ).catch(err => {
+        console.log(err);
+        res.status(500).json({err});
+    });
 });
 
 
@@ -102,6 +111,9 @@ app.post("/addcase", (req,res)=>
 
     knex("trafficking_data").insert(req.body).then((results) => {
         res.redirect("/viewdata");
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json({err});
     });
 
     // CAN USE THIS IF YOU DON'T WANT TO DO EACH INDIVIDUAL ATTRIBUTE (FORM INPUT)
@@ -119,7 +131,10 @@ app.get("/edit/:caseid", (req,res) => {
             res.render("editcase",{aCase: result}); // the "result" "array" is now the aCase array in the ejs file
             // aCase is only going to return the one record that you're editing
         } // putting the results pulled from the database into an array 
-    );
+    ).catch(err => {
+        console.log(err);
+        res.status(500).json({err});
+    });
 });
 
 // post method to edit a case
@@ -138,14 +153,19 @@ app.post("/edit/:caseid", (req,res) => {
         
     }).then((result) => {
             res.redirect("/viewdata"); // the "result" "array" is now the aCase array in the ejs file
-        }
-    );
+        }).catch(err => {
+        console.log(err);
+        res.status(500).json({err});
+    });
 });
 
 // post method to delete a case
 app.get("/delete/:caseid", (req,res) => {
     knex("trafficking_data").where("case", req.params.caseid).del().then((result)=> { // delete the record
-        res.redirect("/viewdata")}); // go back to the viewdata route (to get to the viewdata.ejs page)
+        res.redirect("/viewdata")}).catch(err => {
+            console.log(err);
+            res.status(500).json({err});
+        }); // go back to the viewdata route (to get to the viewdata.ejs page)
 });
 
 
