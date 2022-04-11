@@ -42,9 +42,8 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ms-auto my-2 my-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#help">Edit Case</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Add Case</a></li>
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index">View Table</a></li>
         </ul>
       </div>
     </div>
@@ -52,16 +51,16 @@
 
   <section class="page-section bg-dark text-white" id="addcase">
     <div class="container px-4 px-lg-5 text-center">
-      <h2 class="mb-4">Human Trafficking Statistics</h2>
+      <!-- <h2 class="mb-4">Human Trafficking Statistics</h2>
       <hr class="divider divider-light" />
       <p>Over 50% of identified girl victims are aged between 15 and 17 while about 40% of trafficked boys are under 12 years of age.</p>
-
+      <hr class="divider divider-light" /><br> -->
       <center>
-        <h1>Report a Case of Human Trafficking</h1><br>
-
+        <h2>Report a Case of Human Trafficking</h2>
+        <hr class="divider divider-light" />
         <form method="post" action="/addcase">
           <fieldset>
-            <legend>Report a Case</legend>
+            <legend>Report a Case</legend><br><br>
             <!-- <div style="text-align: left; margin-left: 25%;"> -->
             <label for="date_missing">Date this person went missing: </label>
             <input type="date" id="date_missing" name="date_missing" required><br><br>
@@ -100,7 +99,7 @@
             </div>
             <!-- </div> -->
             <div><label for="submitButton"></label></div>
-            <button type="submit" id="submitButton">Add Case</button>
+            <button class="btn btn-primary btn-xl" type="submit" id="submitButton">Add Case</button>
           </fieldset>
         </form>
       </center>
