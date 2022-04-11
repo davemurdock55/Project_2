@@ -68,6 +68,8 @@
   --bs-body-bg: #fff;
 }
 
+/* Custom Styles */
+
 .btn-trans {
   background-color: transparent;
   border: none;
@@ -125,7 +127,6 @@
   transition: .4s;
 }
 
-/* Custom Styles */
 .no-decor {
   text-decoration: none;
 }
@@ -134,6 +135,11 @@
   font-weight: bold;
 }
 
+
+
+
+
+/* Their CSS */
 .primary-border {
   border: 2px solid var(--bs-primary);
 }
