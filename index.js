@@ -2,7 +2,12 @@
 // Descr: A website to help [STOP] Human Trafficking (including provided data and sources)
 
 // STARTUP NODE STUFF
-const PORT = 3000;
+const port = process.env.PORT || "3000";
+let hostname = process.env.RDS_HOSTNAME || "127.0.0.1";
+let rds_port = process.env.RDS_PORT || "5432";
+let rds_db_name = "human_trafficking";
+let rds_username = process.env.RDS_USERNAME || "postgres";
+let rds_password = process.env.RDS_password || "1El2Is5us10!";
 
 
 // import a module
@@ -21,6 +26,7 @@ app.set("view engine","ejs");
 app.use(express.urlencoded({extended:true}));
 
 let path = require("path");
+const { host } = require("pg/lib/defaults");
 
 
 // serving static files using Express (connecting to the bootstrap)
@@ -33,11 +39,11 @@ const knex = require("knex") (
 {
     client: "pg",
     connection: {
-        host: "localhost",
-        user: "postgres",
-        password: "1El2Is5us10!",
-        database: "human_trafficking",
-        post: 5432,
+        host: hostname,
+        user: rds_username,
+        password: rds_password,
+        database: rds_db_name,
+        port: rds_port,
     },
 });
 
@@ -170,4 +176,4 @@ app.get("/delete/:caseid", (req,res) => {
 
 
 // sends a message to the conosle when the website goes live
-app.listen(PORT, () => console.log("Website active"));
+app.listen(port, () => console.log("Website active"));
