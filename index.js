@@ -129,7 +129,7 @@ app.post("/addcase", (req,res)=>
 });
 
 
-// form to add a case
+// form to edit a case
 app.get("/edit/:caseid", (req,res) => {
     // allows you to use the words of a SQL statement as Javascript functions almost :)
     knex.select().from("trafficking_data").where("case",req.params.caseid).then((result) => {
