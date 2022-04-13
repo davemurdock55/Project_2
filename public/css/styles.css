@@ -122,6 +122,17 @@ input[type="number"]::-webkit-inner-spin-button {
   cursor: pointer;
 }
 
+input[type="number"]::-webkit-inner-spin-button:hover {
+  box-shadow: 0px 0px 5px 1px rgba(255, 255, 255,1);
+-webkit-box-shadow: 0px 0px 5px 1px rgba(255, 255, 255,1);
+-moz-box-shadow: 0px 0px 5px 1px rgba(255, 255, 255,1);
+  transition: .2s;
+}
+
+input:focus {
+
+}
+
 
 .btn-trans {
   background-color: transparent;
