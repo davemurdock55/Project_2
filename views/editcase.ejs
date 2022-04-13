@@ -56,7 +56,7 @@
         <h1>Edit a Case</h1>
         <form method="post" action="/edit/<%= aCase[0].case %>">
           <hr class="divider divider-light" />
-          <fieldset>
+          <fieldset style="border: 1px solid #fff;">
             <legend>Edit/Update a Case</legend><br><br>
 
             <label for="date_missing">Date this person went missing: </label>
@@ -145,6 +145,7 @@
 
                     <label for="submitButton"></label>
                     <button class="btn btn-light btn-xl" type="submit" id="submitButton">Save Edits</button>
+                    <br><br>
           </fieldset>
         </form>
       </center>
