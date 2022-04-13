@@ -92,31 +92,21 @@
                     selected
                 <%}%>>Other</option>
             </select>
+            <br><br>
 
-            <label for="state">State where the person went missing: </label>
-            <input type="text" id="state" name="state" maxlength="2" required value="<%= aCase[0].state %>"><br><br>
-
-            <label for="gender">Person's gender: </label>
-            <!-- <input type="text" id="gender" name="gender" max="1" value="<%= aCase[0].gender %>"><br><br> -->
-            <select name="gender" id="gender" required value="<%= aCase[0].gender %>">
-                <option value="M" <% if(aCase[0].gender == "M") {%> selected <%}%>>Male</option>
-                <option value="F" <% if(aCase[0].gender == "F") {%> selected <%}%>>Female</option>
-                <option value="O" <% if(aCase[0].gender == "O") {%> selected <%}%>>Other</option>
+            <label for="race">Person's race:  </label>
+            <!-- <input type="text" id="race" name="race" max="1" value="<%= aCase[0].race %>"><br><br> -->
+            <select name="race" id="race" required value="<%= aCase[0].race %>" class="inpt-box">
+                <option value="W" <% if(aCase[0].race == "W") {%>
+                    selected
+                <%}%>>W</option>
+                <option value="M" <% if(aCase[0].race == "M") {%>
+                    selected
+                <%}%>>M</option>
+                <option value="H" <% if(aCase[0].race == "H") {%>
+                    selected
+                <%}%>>H</option>
             </select>
-                    <br><br>
-                    <label for="race">Person's race:  </label>
-                    <!-- <input type="text" id="race" name="race" max="1" value="<%= aCase[0].race %>"><br><br> -->
-                    <select name="race" id="race" required value="<%= aCase[0].race %>" class="inpt-box">
-                        <option value="W" <% if(aCase[0].race == "W") {%>
-                            selected
-                        <%}%>>W</option>
-                        <option value="M" <% if(aCase[0].race == "M") {%>
-                            selected
-                        <%}%>>M</option>
-                        <option value="H" <% if(aCase[0].race == "H") {%>
-                            selected
-                        <%}%>>H</option>
-                    </select>
 
                     <!-- <table>
                         <thead>
