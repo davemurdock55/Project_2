@@ -43,8 +43,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ms-auto my-2 my-lg-0">
           <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index">View Data</a></li>
-          <li class="nav-item"><a class="nav-link" href="/addcase">Report A Case</a></li>
+          <li class="nav-item"><a class="nav-link" href="/viewdata">View Table</a></li>
         </ul>
       </div>
     </div>
@@ -59,10 +58,9 @@
       <center>
         <h2>Report a Case of Human Trafficking</h2>
         <hr class="divider divider-light" />
-        <form method="post" action="/addcase">
+        <!-- <form method="post" action="/addcase">
           <fieldset>
             <legend>Report a Case</legend><br><br>
-            <!-- <div style="text-align: left; margin-left: 25%;"> -->
             <label for="date_missing">Date this person went missing: </label>
             <input type="date" id="date_missing" name="date_missing" required><br><br>
 
@@ -82,7 +80,6 @@
             <input type="text" id="state" name="state" maxlength="2" required><br><br>
 
             <label for="gender">Person's gender: </label>
-            <!-- <input type="text" id="gender" name="gender" max="1"><br><br> -->
             <select name="gender" id="gender" required>
               <option value="M">Male</option>
               <option value="F">Female</option>
@@ -91,20 +88,80 @@
             <br><br>
             <div>
               <label for="race">Person's race: </label>
-              <!-- <input type="text" id="race" name="race" max="1"><br><br> -->
               <select name="race" id="race" required>
                 <option value="W">W</option>
                 <option value="M">M</option>
                 <option value="H">H</option>
               </select>
             </div>
-            <!-- </div> -->
             <div><label for="submitButton"></label></div>
             <button class="btn btn-primary btn-xl" type="submit" id="submitButton">Add Case</button>
           </fieldset>
         </form>
       </center>
     </div>
+    <br><br> -->
+        <form method="post" action="/addcase">
+          <table>
+            <thead>
+              <tr>
+                <!-- <th>Case</th> -->
+                <th>Date Missing</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age At Missing</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Gender</th>
+                <th>Race</th>
+              </tr>
+            </thead>
+            <tr>
+              <td><label for="date_missing"></label>
+                <input type="date" id="date_missing" name="date_missing" required>
+              </td>
+              <td><label for="first_name"></label>
+                <input type="text" id="first_name" name="first_name" maxlength="30" required>
+              </td>
+              <td><label for="last_name"></label>
+                <input type="text" id="last_name" name="last_name" maxlength="30" required>
+              </td>
+              <td><label for="age_at_missing"></label>
+                <input type="number" id="age_at_missing" name="age_at_missing" maxlength="3" required>
+              </td>
+              <td><label for="city"></label>
+                <input type="text" id="city" name="city" maxlength="30" required>
+              </td>
+              <td><label for="state"></label>
+                <input type="text" id="state" name="state" maxlength="2" required>
+              </td>
+              <td><label for="gender"></label>
+                <select name="gender" id="gender" required>
+                  <option value="M">Male</option>
+                  <option value="F">Female</option>
+                  <option value="O">Other</option>
+                </select>
+              </td>
+              <td><label for="race"></label>
+                <select name="race" id="race" required>
+                  <option value="W">W</option>
+                  <option value="M">M</option>
+                  <option value="H">H</option>
+                </select>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <div style="text-align: center;"><label for="submitButton"></label><br>
+            <button style="text-align: center;" class="btn btn-primary btn-xl" type="submit" id="submitButton">Add Case</button>
+          </div>
+        </form><br><br>
+        <p>“Remember that every person on the streets, in a club, on the internet, in a hotel room, WHEREVER they may be, have families and loved ones and hearts just as you do, and that they are worthy and enough.
+          When you see us, could you just offer a small smile?
+          Extend a small bit of compassion even though you may not personally understand?
+          Small, simple actions have the potential to make a large impact, and now is the time more than ever before.”
+        </p><br>
+        <p>—Melissa Diehl, survivor of human trafficking</p>
   </section>
 
   <!-- Footer-->
