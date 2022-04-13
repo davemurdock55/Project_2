@@ -61,7 +61,7 @@
 
             <label for="date_missing">Date this person went missing: </label>
             <!-- <input type="date" id="date_missing" name="date_missing" required value="<%= aCase[0].date_missing.getFullYear() %>-<%= aCase[0].date_missing.getMonth() %>-<%= aCase[0].date_missing.getDate() %>"><br> -->
-            <input type="text" id="date_missing" name="date_missing" required value="<%= aCase[0].date_missing.getFullYear() %>-<%= aCase[0].date_missing.getMonth() %>-<%= aCase[0].date_missing.getDate() %>"><br>
+            <input type="text" id="date_missing" name="date_missing" required value="<%= aCase[0].date_missing.getMonth()+1 %>/<%= aCase[0].date_missing.getDate() %>/<%= aCase[0].date_missing.getFullYear() %>"><br>
             <!-- <input type="date" id="date_missing" name="date_missing" value="<%= aCase[0].date_missing %>"><br><br> -->
 
             <label for="first_name">Person's first name:  </label>
