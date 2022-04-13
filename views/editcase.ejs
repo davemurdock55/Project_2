@@ -61,23 +61,23 @@
 
             <label for="date_missing">Date this person went missing: </label>
             <!-- <input type="date" id="date_missing" name="date_missing" required value="<%= aCase[0].date_missing.getFullYear() %>-<%= aCase[0].date_missing.getMonth() %>-<%= aCase[0].date_missing.getDate() %>"><br> -->
-            <input type="text" id="date_missing" name="date_missing" required value="<%= aCase[0].date_missing.getMonth()+1 %>/<%= aCase[0].date_missing.getDate() %>/<%= aCase[0].date_missing.getFullYear() %>"><br>
+            <input type="text" id="date_missing" name="date_missing" required value="<%= aCase[0].date_missing.getMonth()+1 %>/<%= aCase[0].date_missing.getDate() %>/<%= aCase[0].date_missing.getFullYear() %>" placeholder="MM/DD/YYYY"><br>
             <!-- <input type="date" id="date_missing" name="date_missing" value="<%= aCase[0].date_missing %>"><br><br> -->
 
             <label for="first_name">Person's first name:  </label>
-            <input type="text" id="first_name" name="first_name" maxlength="30" required value="<%= aCase[0].first_name %>" class="inpt-box"><br><br>
+            <input type="text" id="first_name" name="first_name" maxlength="30" required value="<%= aCase[0].first_name %>" class="inpt-box" placeholder="First Name"><br><br>
 
             <label for="last_name">Person's last name:  </label>
-            <input type="text" id="last_name" name="last_name" maxlength="30" required value="<%= aCase[0].last_name %>" class="inpt-box"><br><br>
+            <input type="text" id="last_name" name="last_name" maxlength="30" required value="<%= aCase[0].last_name %>" class="inpt-box" placeholder="Last Name"><br><br>
             
             <label for="age_at_missing">Person's age when they went missing:  </label>
             <input type="number" id="age_at_missing" name="age_at_missing" maxlength="3" required value="<%= aCase[0].age_at_missing %>" class="inpt-box"><br><br>
 
             <label for="city">City where the person went missing:  </label>
-            <input type="text" id="city" name="city" maxlength="30" required value="<%= aCase[0].city %>" class="inpt-box"><br><br>
+            <input type="text" id="city" name="city" maxlength="30" required value="<%= aCase[0].city %>" class="inpt-box" placeholder="Sacramento"><br><br>
 
             <label for="state">State where the person went missing:  </label>
-            <input type="text" id="state" name="state" maxlength="2" required value="<%= aCase[0].state %>" class="inpt-box"><br><br>
+            <input type="text" id="state" name="state" maxlength="2" required value="<%= aCase[0].state %>" class="inpt-box" placeholder="CA"><br><br>
 
             <label for="gender">Person's gender:  </label>
             <!-- <input type="text" id="gender" name="gender" max="1" value="<%= aCase[0].gender %>"><br><br> -->
