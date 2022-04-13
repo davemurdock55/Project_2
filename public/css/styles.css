@@ -69,6 +69,21 @@
 }
 
 /* Custom Styles */
+::-webkit-datetime-edit-text { color: #fff; padding: 0 0.3em; }
+::-webkit-datetime-edit-month-field { color: #fff; }
+::-webkit-datetime-edit-day-field { color: #fff; }
+::-webkit-datetime-edit-year-field { color: #fff; }
+::-webkit-inner-spin-button { display: none; }
+::-webkit-calendar-picker-indicator { background-color: #fff; border-radius: 5px; margin-right: 3px;}
+::-webkit-calendar-picker
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  color: #fff;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-right: 3px;
+
+}
 
 .btn-trans {
   background-color: transparent;
