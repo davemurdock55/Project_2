@@ -61,51 +61,39 @@
 
             <label for="date_missing">Date this person went missing: </label>
             <!-- <input type="date" id="date_missing" name="date_missing" required value="<%= aCase[0].date_missing.getFullYear() %>-<%= aCase[0].date_missing.getMonth() %>-<%= aCase[0].date_missing.getDate() %>"><br> -->
-            <input type="text" id="date_missing" name="date_missing" required value="<%= aCase[0].date_missing.getMonth()+1 %>/<%= aCase[0].date_missing.getDate() %>/<%= aCase[0].date_missing.getFullYear() %>" placeholder="MM/DD/YYYY"><br>
+            <input type="text" id="date_missing" name="date_missing" required value="<%= aCase[0].date_missing.getMonth()+1 %>/<%= aCase[0].date_missing.getDate() %>/<%= aCase[0].date_missing.getFullYear() %>" placeholder="MM/DD/YYYY"><br><br>
             <!-- <input type="date" id="date_missing" name="date_missing" value="<%= aCase[0].date_missing %>"><br><br> -->
 
-            <label for="first_name">Person's first name:  </label>
+            <label for="first_name">Person's first name: </label>
             <input type="text" id="first_name" name="first_name" maxlength="30" required value="<%= aCase[0].first_name %>" class="inpt-box" placeholder="First Name"><br><br>
 
-            <label for="last_name">Person's last name:  </label>
+            <label for="last_name">Person's last name: </label>
             <input type="text" id="last_name" name="last_name" maxlength="30" required value="<%= aCase[0].last_name %>" class="inpt-box" placeholder="Last Name"><br><br>
-            
-            <label for="age_at_missing">Person's age when they went missing:  </label>
+
+            <label for="age_at_missing">Person's age when they went missing: </label>
             <input type="number" id="age_at_missing" name="age_at_missing" maxlength="3" required value="<%= aCase[0].age_at_missing %>" class="inpt-box" placeholder="0"><br><br>
 
-            <label for="city">City where the person went missing:  </label>
+            <label for="city">City where the person went missing: </label>
             <input type="text" id="city" name="city" maxlength="30" required value="<%= aCase[0].city %>" class="inpt-box" placeholder="Sacramento"><br><br>
 
-            <label for="state">State where the person went missing:  </label>
+            <label for="state">State where the person went missing: </label>
             <input type="text" id="state" name="state" maxlength="2" required value="<%= aCase[0].state %>" class="inpt-box" placeholder="CA"><br><br>
 
-            <label for="gender">Person's gender:  </label>
+            <label for="gender">Person's gender: </label>
             <!-- <input type="text" id="gender" name="gender" max="1" value="<%= aCase[0].gender %>"><br><br> -->
             <select name="gender" id="gender" required value="<%= aCase[0].gender %>" class="inpt-box">
-                <option value="M" <% if(aCase[0].gender == "M") {%>
-                    selected
-                <%}%>>Male</option>
-                <option value="F" <% if(aCase[0].gender == "F") {%>
-                    selected
-                <%}%>>Female</option>
-                <option value="O" <% if(aCase[0].gender == "O") {%>
-                    selected
-                <%}%>>Other</option>
+              <option value="M" <% if(aCase[0].gender == "M") {%> selected <%}%>>Male</option>
+                <option value="F" <% if(aCase[0].gender == "F") {%> selected <%}%>>Female</option>
+                <option value="O" <% if(aCase[0].gender == "O") {%> selected <%}%>>Other</option>
             </select>
             <br><br>
 
             <label for="race">Person's race:  </label>
             <!-- <input type="text" id="race" name="race" max="1" value="<%= aCase[0].race %>"><br><br> -->
-            <select name="race" id="race" required value="<%= aCase[0].race %>" class="inpt-box">
-                <option value="W" <% if(aCase[0].race == "W") {%>
-                    selected
-                <%}%>>W</option>
-                <option value="M" <% if(aCase[0].race == "M") {%>
-                    selected
-                <%}%>>M</option>
-                <option value="H" <% if(aCase[0].race == "H") {%>
-                    selected
-                <%}%>>H</option>
+                <select name="race" id="race" required value="<%= aCase[0].race %>" class="inpt-box">
+                  <option value="W" <% if(aCase[0].race == "W") {%> selected <%}%>>W</option>
+                <option value="M" <% if(aCase[0].race == "M") {%> selected <%}%>>M</option>
+                <option value="H" <% if(aCase[0].race == "H") {%> selected <%}%>>H</option>
             </select>
 
                     <!-- <table>
@@ -157,11 +145,11 @@
 
                     <label for="submitButton"></label>
                     <button class="btn btn-light btn-xl" type="submit" id="submitButton">Save Edits</button>
-                </fieldset>
-            </form>
-            </center>
-        </div>
-    </section>
+          </fieldset>
+        </form>
+      </center>
+    </div>
+  </section>
 
   <!-- Footer-->
   <footer class="bg-light py-5">
